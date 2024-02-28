@@ -1,0 +1,27 @@
+<script>
+    function prom(a) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (a) {
+                    resolve("I am successfull")
+                } else {
+                    reject("I am failed")
+                }
+
+            }, 4000)
+            // fetch('https://jsonplaceholder.typicode.com/todos/1')
+            //     .then(response => response.json())
+            //     .then(json => console.log(json))
+
+        })
+    }
+    //prom(true) //call
+    //console.log(prom(true))
+    prom(false).then((result) => {
+        console.log(result)
+        document.write(result)
+    }).catch((error) => {
+        console.log(error)
+    })
+    console.log("hello gwalior")
+</script>
